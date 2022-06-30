@@ -1,0 +1,64 @@
+section.application-internet-form
+    .container 
+        .application-internet-form__inner
+            h1.application-internet-form__title.title Заявка на подключение
+            form.application-internet-form__content(id="application-internet-form")
+                .application-internet-form__main
+                    h2.application-internet-form__main-title Интернет
+                    .application-internet-form__main-box
+                        .internet-speed
+                            label.internet-speed__label(for="internet-speed-5") 
+                                input.internet-speed__checkbox.data-item(type="radio", data-item="5" name="Скорость интернета", id="internet-speed-5", checked, value="5 мбит/с 2 000 руб/мес")
+                                span.internet-speed__checkbox-fake
+                                .internet-speed__text
+                                    p.internet-speed__text-score 5 мбит/с
+                                    p.internet-speed__text-cost 2 000 руб/мес
+                            label.internet-speed__label(for="internet-speed-10") 
+                                input.internet-speed__checkbox.data-item(type="radio", data-item="10" name="Скорость интернета", id="internet-speed-10", value="10 мбит/с 3 000 руб/мес")
+                                span.internet-speed__checkbox-fake
+                                .internet-speed__text
+                                    p.internet-speed__text-score 10 мбит/с
+                                    p.internet-speed__text-cost 3 000 руб/мес
+                            label.internet-speed__label(for="internet-speed-50") 
+                                input.internet-speed__checkbox.data-item(type="radio", data-item="50" name="Скорость интернета", id="internet-speed-50", value="50 мбит/с 10 000 руб/мес")
+                                span.internet-speed__checkbox-fake
+                                .internet-speed__text
+                                    p.internet-speed__text-score 50 мбит/с
+                                    p.internet-speed__text-cost 10 000 руб/мес
+                        .internet-type
+                            label.internet-type__label(for="internet-type-1") 
+                                input.internet-type__checkbox.data-item(type="radio", name="Wi-Fi роутер", id="internet-type-1", value="Wi-Fi роутер Mercusys MW325R 1 900 ₽")
+                                span.internet-type__checkbox-fake
+                                .internet-type__text
+                                    p.internet-type__text-name Wi-Fi роутер Mercusys MW325R 
+                                    p.internet-type__text-cost 1 900 ₽
+                            label.internet-type__label(for="internet-type-2") 
+                                input.internet-type__checkbox.data-item(type="radio", name="Wi-Fi роутер", id="internet-type-2", value="Wi-Fi роутер ASUS RT-N12 3 000 ₽")
+                                span.internet-type__checkbox-fake
+                                .internet-type__text
+                                    p.internet-type__text-name Wi-Fi роутер ASUS RT-N12  
+                                    p.internet-type__text-cost 3 000 ₽
+                .application-internet-form__adress
+                    h2.application-internet-form__adress-title Адрес подключения
+                    .application-internet-form__adress-box
+                        .connection-address
+                            .connection-address__columns
+                                .connection-address__column--hidden 
+                                    input(type='hidden' name="project_name" value='Homenet')
+                                    input(type='hidden' name='admin_email' value='n.rybkin@gmail.com')
+                                    input(type='hidden' name='form_subject' value='Заявка на подключение интернета')
+                                .connection-address__column 
+                                    input.connection-address__input(type="text", placeholder="Населённый пункт", id="locality", name="Населённый пункт")
+                                    input.connection-address__input(type="text", placeholder="Дом", id="house", name="Дом")
+                                    input.connection-address__input(type="text", placeholder="ФИО*", id="fio", name="ФИО",  required)
+                                .connection-address__column 
+                                    input.connection-address__input(type="text", placeholder="Улица", id="street", name="Улица")
+                                    input.connection-address__input(type="text", placeholder="Номер офиса", id="office-number", name="Номер офиса")
+                                    input.connection-address__input(type="text", placeholder="Телефон*", id="telephone", name="Телефон",  required)
+                            label.connection-address__agreement(for="agreement")
+                                input.connection-address__checkbox._req(type="checkbox", name="Соглашение", id="agreement", value="Согласен"  required)
+                                span.connection-address__checkbox-fake
+                                a.connection-address__text(href="./Соглашение.pdf") Согласен на обработку персональных данных
+                button.application-internet-form__button.default-yellow-button(type="submit") Отправить
+                a.application-internet-form__link.gratitude-application-popup-link(href="#gratitude-application-popup")
+

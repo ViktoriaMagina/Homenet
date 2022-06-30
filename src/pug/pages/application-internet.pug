@@ -1,0 +1,18 @@
+doctype html
+head(lang='ru')
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(rel='icon', href='./favicon.ico')
+  link(rel='stylesheet', href='./css/style.min.css')
+  title Homenet
+include ../components/_header.pug
+.wrapper#wrapper
+  main.main
+    .content-wrapper
+        include ../components/_application-internet-form.pug
+  include ../components/_footer.pug
+  include ../components/_gratitude-application-popup.pug
+  include ../components/_legal-or-physical-popup
+script(src='./js/application.js')
+script(src='./js/localGet.js')

@@ -1,0 +1,28 @@
+.career-content{
+    margin: 84px 0;
+    &__main{
+        padding-bottom: 10px;
+        border-bottom: 1px solid #C4C4C4;
+    }
+    &__title{
+        margin-bottom: 25px;
+    }
+    &__text{
+        display: inline;
+    }
+    &__box{
+        margin-bottom: 15px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 19px;
+    }
+    &__name{
+        margin-right: 2px;
+        font-weight: 700;
+    }
+    &__info{
+        margin-top: 20px;
+        font-size: 15px;
+        line-height: 24px;
+    }
+}

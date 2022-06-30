@@ -1,0 +1,37 @@
+.company-details{
+    background-color: #FFFFFF;
+    padding: 17px 33px;
+    &__title{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 10px;
+        padding-bottom: 19px;
+        border-bottom: 1px solid rgba(229, 229, 229, 0.47);
+    }
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 19px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(229, 229, 229, 0.47);
+        @include for-phone{
+            flex-direction: column;
+        }
+    }
+    &__name{
+        max-width: 164px;
+        width: 100%;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        margin-right: 10px;
+        @include for-phone{
+            margin-bottom: 10px;
+        }
+    }
+    &__text{
+        max-width: 245px;
+        width: 100%;
+    }
+}

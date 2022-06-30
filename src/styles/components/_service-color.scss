@@ -1,0 +1,36 @@
+.service-color{
+    box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.06);
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 340px;
+    height: 100%;
+    &__img{
+        height: 161px;
+        object-fit: cover;
+        width: 100%;
+    }
+    &__box{
+        padding: 10px 8px;
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__title{
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 11px;
+        word-wrap: break-word;
+    }
+    &__text{
+        margin-bottom: 8px;
+        min-height: 42px;
+        word-wrap: break-word;
+        max-width: 210px;
+    }
+    &__link{
+        margin: 0 7px 30px 7px;
+    }
+}

@@ -1,0 +1,99 @@
+.tariff-table-optics{
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid rgba(229, 229, 229, 0.47);
+    box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.06);
+    overflow-x: auto;
+    &__row{
+        border: 1px solid rgba(122, 122, 122, 0.11);
+        display: grid;
+        // grid-template-columns: 202px repeat(5, 204px);
+        grid-template-columns: 202px repeat(5, 1fr);
+        border-top: none;
+        border-bottom: none;
+        border-right: none;
+        &--mini{
+            grid-template-columns: 202px repeat(4, 1fr);
+        }
+        @include for-desktop{
+            grid-template-columns: 160px repeat(5, 1fr);
+            &--mini{
+                grid-template-columns: 160px repeat(4, 1fr);
+            }
+            
+        }
+        @media (max-width: 900px) {
+            grid-template-columns: 202px repeat(5, 170px);
+            &--mini{
+                grid-template-columns: 202px repeat(4, 170px);
+            }
+        }
+        &:nth-child(2n + 3){
+            .tariff-table-optics__row-title,
+            .tariff-table-optics__row-item{
+                background-color: #FAFAFA;
+            }
+        }
+    }
+    &__row-title{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 20px 29px;
+        border-bottom: 1px solid rgba(122, 122, 122, 0.11);
+        @include for-desktop{
+            font-size: 14px;
+        }
+    }
+    &__row-item{
+        padding: 30px;
+        text-align: center;
+        border: 1px solid rgba(122, 122, 122, 0.11);
+        font-size: 18px;
+        line-height: 1.5;
+        border-top: none;
+        border-right: none;
+    }
+    &__header{
+        .tariff-table-optics__row-item{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            background: #F2F6FF;
+        }
+        .tariff-table-optics__row-title{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            background: #F2F6FF;
+        }
+    }
+    &__item{
+        text-align: center;
+        border: 1px solid rgba(122, 122, 122, 0.11);
+        &:first-child{
+            text-align: right;
+        }
+    }
+    &__row-links{
+        .tariff-table-optics__row-item{
+            padding: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+    }
+    &__row-link{
+        border: 1px solid rgba(122, 122, 122, 0.11);
+        margin: 0 auto;
+        .tariff-table-optics__item{
+            border-top: none;
+            border-bottom: none;
+        }
+        @include for-desktop{
+            padding: 10px 5px;
+            font-size: 14px;
+        }
+    }
+}

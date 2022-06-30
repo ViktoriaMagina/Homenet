@@ -1,0 +1,66 @@
+doctype html
+head(lang='ru')
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(rel='icon', href='./favicon.ico')
+  link(rel='stylesheet', href='./css/style.min.css')
+  title Homenet
+header.header#header
+    .container
+        .header-main 
+            include ../components/_header-menu.pug
+            .header-top 
+                .header-top__right 
+                    .header-top__btn
+                        img(src="./img/header/burger.svg", alt="burger")
+                    a.header-logo(href="./index.html")
+                        img.header-logo__img(src="./img/header/logo.svg", alt="Логотип")
+                    nav.header-top__nav 
+                        ul.header-top__nav-list
+                            li.header-top__nav-item
+                                a.header-top__nav-link(href="./legal-entities.html") Юридическим лицам
+                            li.header-top__nav-item
+                                a.header-top__nav-link(href="./natural-persons.html") Физическим лицам
+                            li.header-top__nav-item
+                                a.header-top__nav-link(href="./telephony.html") Телефония
+                            li.header-top__nav-item
+                                a.header-top__nav-link.header-link--active(href="./television.html") Телевидение
+                a.header-sign-in(href="http://lc.homenet.spb.su/" target="_blank")
+                    span.header-sign-in__text Войти
+                    img.header-sign-in__img(src="./img/header/signIn.svg", alt="Войти")
+            .header-bottom
+                nav.header-bottom__nav
+                    ul.header-bottom__nav-list--hidden.header-bottom__nav-list
+                        li.header-bottom__nav-item
+                            a.header-bottom__nav-link(href="./legal-entities.html") Юридическим лицам
+                        li.header-bottom__nav-item
+                            a.header-bottom__nav-link(href="./natural-persons.html") Физическим лицам
+                        li.header-bottom__nav-item
+                            a.header-bottom__nav-link(href="./telephony.html") Телефония
+                        li.header-bottom__nav-item
+                            a.header-bottom__nav-link.header-link--active.header-link(href="./television.html") Телевидение
+                    ul.header-bottom__nav-list
+                        li.header-bottom__nav-item 
+                            a.header-bottom__nav-link.legal-or-physical-popup-link(href="#legal-or-physical-popup") Тарифы
+                        li.header-bottom__nav-item 
+                            a.header-bottom__nav-link(href="./payment.html") Оплата
+                        li.header-bottom__nav-item 
+                            a.header-bottom__nav-link(href="./video-surveillance.html") Видеонаблюдение
+                        li.header-bottom__nav-item 
+                            a.header-bottom__nav-link(href="./it-outsourcing.html") IT-аутсорсинг
+                        li.header-bottom__nav-item 
+                            a.header-bottom__nav-link(href="./contacts.html") Контакты
+                        li.header-bottom__nav-item 
+                            a.header-bottom__nav-link(href="./products.html") Товары
+                        li.header-bottom__nav-item 
+                            a.header-bottom__nav-link(href="./career.html") Карьера
+                        li.header-bottom__nav-item 
+                            a.header-bottom__nav-link.legal-or-physical-popup-link(href="#legal-or-physical-popup") Подключиться
+                a.header-tel(href="tel:+78127770601") +7 (812) 777-06-01
+.wrapper#wrapper
+  main.main
+    <iframe width="100%" height="800" src="https://smotreshka.tv/premiumtwo?name=msn-net">
+  include ../components/_footer.pug
+  include ../components/_legal-or-physical-popup
+script(src='./js/index.js')

@@ -1,0 +1,212 @@
+.application-products-form{
+    margin-top: 64px;
+    &__title{
+        text-align: center;
+        margin-bottom: 68px;
+    }
+    &__content{
+        max-width: 808px;
+        margin: 0 auto 84px auto;
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
+        padding: 63px 104px;
+        @include for-tablet-landscape{
+            padding: 40px 70px;
+        }
+        @include for-tablet-landscape-min{
+            padding: 30px 54px;
+        }
+        @include for-phone{
+            padding: 20px 23px;
+        }
+        
+    }
+    &__container{
+        padding-bottom: 40px;
+        border-bottom: 1px solid rgba(229, 229, 229, 0.47);
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 42px;
+        @include for-tablet-landscape{
+            flex-direction: column;
+        }
+    }
+    &__main-box{
+        max-width: 360px;
+        width: 100%;
+        .video-cameras,
+        .wifi,
+        .tv-boxes{
+            &__label{
+                display: flex;
+                position: relative;
+                margin-bottom: 11px;
+                max-width: 374px;
+                width: 100%;
+            }
+            &__checkbox{
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                visibility: hidden;
+                &:checked{
+                    & + span{
+                        &::after{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            &__checkbox-fake{
+                flex: 0 0 auto;
+                border: 1px solid #000000;
+                border-radius: 2px;
+                margin-right: 21px;
+                width: 16px;
+                height: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    background-color: #000000;
+                    width: 10px;
+                    height: 10px;
+                    opacity: 0;
+                    border-radius: 2px;
+                }
+            }
+            &__text{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            &__text-score{
+                margin-right: 10px;
+            }
+            &__text-cost{
+                font-weight: 500;
+            }
+        }
+    }
+    &__main-title{
+        font-size: 20px;
+        line-height: 24px;
+        max-width: 281px;
+        @include for-tablet-landscape{
+            margin-bottom: 18px;
+        }
+    }
+    &__adress{
+        padding-top: 55px;
+        .connection-address{
+            &__text{
+                &:hover{
+                    text-decoration: underline;
+                    transition: all .3s ease-in-out;
+                }
+            }
+            &__columns{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 17px;
+                @include for-tablet-landscape-min{
+                    flex-direction: column;
+                }
+            }
+            &__column{
+                margin-right: 24px;
+                width: 49%;
+                &:last-child{
+                    margin-right: 0;
+                }
+                @include for-tablet-landscape-min{
+                    margin-bottom: 16px;
+                    width: 100%;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &__input{
+                background-color: rgba(237, 242, 255, 0.69);
+                border-radius: 2px;
+                height: 48px;
+                padding: 15px 12px 11px 12px;
+                display: block;
+                width: 100%;
+                margin-bottom: 16px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                &::placeholder{
+                    color: rgba(41, 74, 160, 0.42);
+                }
+            }
+            &__agreement{
+                display: flex;
+                align-items: center;
+                margin-bottom: 27px;
+                color: #7A7A7A;
+                @include for-phone{
+                    font-size: 12px;
+                }
+            }
+            &__checkbox{
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                visibility: hidden;
+                &:checked{
+                    & + span{
+                        &::after{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            &__checkbox-fake{
+                flex: 0 0 auto;
+                border: 1px solid #000000;
+                border-radius: 2px;
+                margin-right: 21px;
+                width: 16px;
+                height: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    background-color: #000000;
+                    width: 10px;
+                    height: 10px;
+                    opacity: 0;
+                    border-radius: 2px;
+                }
+            }
+        }
+    }
+    &__adress-title{
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 40px;
+    }
+    &__button{
+        min-width: 184px;
+    }
+    &__link{
+        display: none;
+    }
+}

@@ -1,0 +1,9 @@
+mixin video-surveillance-type(img, title, text, price)
+    .video-surveillance-type
+        .video-surveillance-type__img-box
+            img.video-surveillance-type__img(src=`./img/video-surveillance-type/img-${img}.png`, alt=`${title}`)
+        .video-surveillance-type__box
+            h5.video-surveillance-type__title= title 
+            p.video-surveillance-type__text= text
+            p.video-surveillance-type__price= price
+            a.video-surveillance-type__link.default-yellow-button(href="./application-video-surveillance.html") Подключить

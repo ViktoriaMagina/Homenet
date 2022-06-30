@@ -1,0 +1,8 @@
+mixin service-color(img, title, text, link, adress)
+    .service-color
+        .service-color__inner
+            img.service-color__img(src=`./img/service-color-card/img-${img}.png`, alt=`${title}`)
+            .service-color__box 
+                h5.service-color__title= title
+                p.service-color__text= text
+        a.service-color__link.default-yellow-button(href=`${adress}`)= link

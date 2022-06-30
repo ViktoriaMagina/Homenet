@@ -1,0 +1,12 @@
+mixin products-item(img, title, price, ...items)
+    .products-item
+        .products-item__box-top
+            .products-item__box-img
+                img.products-item__img(src=`./img/products-item/img-${img}.png`, alt=`${title}`)
+            h5.products-item__title(href="./application-products.html")=title
+            ul.products-item__list
+                each item in items
+                    li.products-item__list-item= item
+        .products-item__box-bottom
+            p.products-item__price(href="./application-products.html")=price
+            a.products-item__link.default-yellow-button(href="./application-products.html") Купить

@@ -1,0 +1,9 @@
+mixin service-dark(img, title, text, link, adress)
+    .service-dark
+        .service-dark__inner
+            img.service-dark__img(src=`./img/service-dark-card/img-${img}.png`, alt=`${title}`)
+            .service-dark__box 
+                h5.service-dark__title= title
+                p.service-dark__text= text
+                .service-dark__link-box
+        a.service-dark__link(href=`${adress}`)= link 

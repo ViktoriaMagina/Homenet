@@ -1,0 +1,19 @@
+.gratitude-resume-popup{
+    padding: 55px 74px;
+    max-width: 473px;
+    min-height: 343px;
+    &__title{
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 1.4;
+        text-align: center;
+        color: #222222;
+        margin-bottom: 22px;
+    }
+    &__img{
+        object-fit: contain;
+        margin: 0 auto;
+        width: 184px;
+        height: 127px;
+    }
+}

@@ -1,0 +1,30 @@
+.legal-entities-services{
+    margin: 84px 0;
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        grid-gap: 24px;
+        @media (max-width: 750px) {
+            display: flex;
+            overflow-x: auto;
+        }
+    }
+    &__title{
+        margin-bottom: 68px;
+        @include for-phone{
+            margin-bottom: 33px;
+        }
+    }
+    &__item{
+        .service-color{
+            @media (max-width: 750px) {
+                width: 288px;
+                margin-right: 24px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

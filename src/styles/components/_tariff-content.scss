@@ -1,0 +1,12 @@
+.tariff-content{
+    margin-top: 66px;
+    &__title{
+       margin-bottom: 64px;
+       @include for-phone{
+           margin-bottom: 40px;
+       }
+    }
+    &__table{
+        margin-bottom: 128px;
+    }
+}

@@ -1,0 +1,44 @@
+section.application-outsourcing-form
+    .container 
+        .application-outsourcing-form__inner
+            h1.application-outsourcing-form__title.title Заявка на подключение услуги IT – аутсорсинг
+            form.application-outsourcing-form__content(id="application-outsourcing")
+                .application-outsourcing-form__main
+                    h2.application-outsourcing-form__main-title Общее кол-во единиц обслуживаемой оргтехники
+                    .application-outsourcing-form__main-box
+                        .number-equipment
+                            label.number-equipment__label(for="number-equipment-1") 
+                                input.number-equipment__checkbox.data-item(type="radio",data-item="1" name="Общее кол-во единиц обслуживаемой оргтехники", id="number-equipment-1", value="от 1 до 5")
+                                span.number-equipment__checkbox-fake
+                                p.number-equipment__text-score от 1 до 5
+                            label.number-equipment__label(for="number-equipment-2") 
+                                input.number-equipment__checkbox.data-item(type="radio",data-item="2" name="Общее кол-во единиц обслуживаемой оргтехники", id="number-equipment-2", value="от 6 до 10")
+                                span.number-equipment__checkbox-fake
+                                p.number-equipment__text-score от 6 до 10
+                            label.number-equipment__label(for="number-equipment-3") 
+                                input.number-equipment__checkbox.data-item(type="radio",data-item="3" name="Общее кол-во единиц обслуживаемой оргтехники", id="number-equipment-3", value="от 11 до 20")
+                                span.number-equipment__checkbox-fake
+                                p.number-equipment__text-score от 11
+                .application-outsourcing-form__adress
+                    h2.application-outsourcing-form__adress-title Адрес подключения
+                    .application-outsourcing-form__adress-box
+                        .connection-address
+                            .connection-address__columns
+                                .connection-address__column--hidden 
+                                    input(type='hidden' name="project_name" value='Homenet')
+                                    input(type='hidden' name='admin_email' value='n.rybkin@gmail.com')
+                                    input(type='hidden' name='form_subject' value='Заявка на подключение услуги IT – аутсорсинг')
+                                .connection-address__column 
+                                    input.connection-address__input(type="text", placeholder="Населённый пункт", id="locality", name="Населённый пункт")
+                                    input.connection-address__input(type="text", placeholder="Дом", id="house", name="Дом")
+                                    input.connection-address__input(type="text", placeholder="ФИО*", id="fio", name="ФИО",  required)
+                                .connection-address__column 
+                                    input.connection-address__input(type="text", placeholder="Улица", id="street", name="Улица")
+                                    input.connection-address__input(type="text", placeholder="Номер офиса", id="office-number", name="Номер офиса")
+                                    input.connection-address__input(type="text", placeholder="Телефон*", id="telephone", name="Телефон",  required)
+                            label.connection-address__agreement(for="agreement")
+                                input.connection-address__checkbox._req(type="checkbox", name="Соглашение", id="agreement", value="Согласен"  required)
+                                span.connection-address__checkbox-fake
+                                a.connection-address__text(href="./Соглашение.pdf") Согласен на обработку персональных данных
+                button.application-outsourcing-form__button.default-yellow-button(type="submit") Отправить
+                a.application-outsourcing-form__link.gratitude-application-popup-link(href="#gratitude-application-popup")

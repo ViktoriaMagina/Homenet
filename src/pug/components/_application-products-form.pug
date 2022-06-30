@@ -1,0 +1,84 @@
+section.application-products-form
+    .container 
+        .application-products-form__inner
+            h1.application-products-form__title.title Заявка на приобретение товара
+            form.application-products-form__content(id="application-products")
+                .application-products-form__main
+                    .application-products-form__container
+                        h2.application-products-form__main-title Видеокамеры
+                        .application-products-form__main-box
+                            .video-cameras
+                                label.video-cameras__label(for="video-cameras-1") 
+                                    input.video-cameras__checkbox.data-item(type="radio", name="Видеокамера", data-item="1" id="video-cameras-1" value="IP-камера TRASSIR TR-D8111IR2W 9 500 ₽")
+                                    span.video-cameras__checkbox-fake
+                                    .video-cameras__text
+                                        p.video-cameras__text-score IP-камера TRASSIR TR-D8111IR2W
+                                        p.video-cameras__text-cost 9 500 ₽
+                                label.video-cameras__label(for="video-cameras-2") 
+                                    input.video-cameras__checkbox.data-item(type="radio", name="Видеокамера", data-item="2" id="video-cameras-2" value="IP-камера TRASSIR TR-D2B5-noPOE 10 500 ₽")
+                                    span.video-cameras__checkbox-fake
+                                    .video-cameras__text
+                                        p.video-cameras__text-score IP-камера TRASSIR TR-D2B5-noPOE
+                                        p.video-cameras__text-cost 10 500 ₽
+                                label.video-cameras__label(for="video-cameras-3") 
+                                    input.video-cameras__checkbox.data-item(type="radio", name="Видеокамера", data-item="3" id="video-cameras-3" value="IP-камера HiWatch DS-I250 12 000 ₽")
+                                    span.video-cameras__checkbox-fake
+                                    .video-cameras__text
+                                        p.video-cameras__text-score IP-камера HiWatch DS-I250
+                                        p.video-cameras__text-cost 12 000 ₽
+                    .application-products-form__container
+                        h2.application-products-form__main-title Wi-Fi роутеры
+                        .application-products-form__main-box
+                            .wifi
+                                label.wifi__label(for="wifi-1") 
+                                    input.wifi__checkbox.data-item(type="radio", name="Wi-Fi роутер", data-item="4" id="wifi-1" value="Wi-Fi роутер Mercusys MW325R 1 900 ₽")
+                                    span.wifi__checkbox-fake
+                                    .wifi__text
+                                        p.wifi__text-score Wi-Fi роутер Mercusys MW325R
+                                        p.wifi__text-cost 1 900 ₽
+                                label.wifi__label(for="wifi-2") 
+                                    input.wifi__checkbox.data-item(type="radio", name="Wi-Fi роутер", data-item="5" id="wifi-2" value="Wi-Fi роутер ASUS RT-N12 3 000 ₽")
+                                    span.wifi__checkbox-fake
+                                    .wifi__text
+                                        p.wifi__text-score Wi-Fi роутер ASUS RT-N12
+                                        p.wifi__text-cost 3 000 ₽
+                    .application-products-form__container
+                        h2.application-products-form__main-title TV приставки
+                        .application-products-form__main-box
+                            .tv-boxes
+                                label.tv-boxes__label(for="tv-boxes-1") 
+                                    input.tv-boxes__checkbox.data-item(type="radio", name="TV приставка", data-item="6" id="tv-boxes-1" value="Смотрёшка BOX 5 000 ₽")
+                                    span.tv-boxes__checkbox-fake
+                                    .tv-boxes__text
+                                        p.tv-boxes__text-score Смотрёшка BOX
+                                        p.tv-boxes__text-cost 5 000 ₽
+                                label.tv-boxes__label(for="tv-boxes-2") 
+                                    input.tv-boxes__checkbox.data-item(type="radio", name="TV приставка", data-item="7" id="tv-boxes-2" value="Xiaomi Mi Box S 6 800 ₽")
+                                    span.tv-boxes__checkbox-fake
+                                    .tv-boxes__text
+                                        p.tv-boxes__text-score Xiaomi Mi Box S
+                                        p.tv-boxes__text-cost 6 800 ₽
+                .application-products-form__adress
+                    h2.application-products-form__adress-title Адрес подключения
+                    .application-products-form__adress-box
+                        .connection-address
+                            .connection-address__columns
+                                .connection-address__column--hidden 
+                                    input(type='hidden' name="project_name" value='Homenet')
+                                    input(type='hidden' name='admin_email' value='n.rybkin@gmail.com')
+                                    input(type='hidden' name='form_subject' value='Заявка на приобретение товара')
+                                .connection-address__column 
+                                    input.connection-address__input(type="text", placeholder="Населённый пункт", id="locality", name="Населённый пункт")
+                                    input.connection-address__input(type="text", placeholder="Дом", id="house", name="Дом")
+                                    input.connection-address__input(type="text", placeholder="ФИО*", id="fio", name="ФИО",  required)
+                                .connection-address__column 
+                                    input.connection-address__input(type="text", placeholder="Улица", id="street", name="Улица")
+                                    input.connection-address__input(type="text", placeholder="Номер квартиры", id="apartment-number", name="Номер квартиры")
+                                    input.connection-address__input(type="text", placeholder="Телефон*", id="telephone", name="Телефон",  required)
+                            label.connection-address__agreement(for="agreement")
+                                input.connection-address__checkbox._req(type="checkbox", name="Соглашение", id="agreement", value="Согласен"  required)
+                                span.connection-address__checkbox-fake
+                                a.connection-address__text(href="./Соглашение.pdf") Согласен на обработку персональных данных
+                button.application-products-form__button.default-yellow-button(type="submit") Отправить
+                a.application-products-form__link.gratitude-application-popup-link(href="#gratitude-application-popup")
+

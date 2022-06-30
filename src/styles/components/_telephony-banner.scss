@@ -1,0 +1,79 @@
+.telephony-banner{
+    // height: calc(100vh - 144px);
+    height: 400px;
+    background-color: #FAFAFA;
+    @media (max-height: 570px) {
+        height: 600px;
+    }
+    @include for-phone{
+        height: 440px;
+    }
+    &__inner{
+        // height: calc(100vh - 144px);
+        height: 400px;
+        background-image: url('../img/telephony-banner/background.png');
+        background-repeat: no-repeat;
+        background-position: right bottom -43px;
+        background-size: contain;
+        @media (max-height: 570px) {
+            height: 600px;
+        }
+        @media (max-width: 790px) {
+            // background-size: 550px;
+            background-position: right -90px bottom -43px;
+        }
+        @include for-phone{
+            background-image: url('../img/telephony-banner/background-mini.png');
+            background-position: right -30px bottom -43px;
+            background-size: 280px;
+            height: 440px;
+        }
+    }
+    &__box {
+        padding-top: 70px;
+        @include for-phone{
+            padding-top: 28px;
+        } 
+    }
+    &__title{
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 15px;
+        max-width: 472px;
+        font-family: 'Arimo', sans-serif;
+        @include for-phone{
+            font-size: 30px;
+            line-height: 45px;
+            max-width: 290px;
+        }
+    }
+    &__list{
+        font-size: 17px;
+        line-height: 22px;
+        margin-bottom: 35px;
+        max-width: 525px;
+        @include for-phone{
+            max-width: 340px;
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+    &__list-item{
+        margin-bottom: 13px;
+        position: relative;
+        padding-left: 14px;
+        &::before{
+            position: absolute;
+            content: '';
+            background-color: #FFDD2D;
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            left: 0;
+            top: 7px;
+        }
+    }
+    &__link{
+        min-width: 184px;
+    }
+}

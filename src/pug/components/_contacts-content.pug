@@ -1,0 +1,34 @@
+section.contacts-content
+    .container 
+        .contacts-content__inner
+            .contacts-content__main
+                .contacts-content__row
+                    .contacts-content__main-box
+                        h1.contacts-content__title.title Контактная информация
+                        img(src="./img/contacts/img-1.png", alt="телефон")
+                    .contacts-content__box 
+                        a.contacts-content__tel(href="tel:+78127770601") +7 (812) 777-06-01
+                        a.contacts-content__mail(href="mailto:sales@homenet.spb.su") sales@homenet.spb.su
+                        p.contacts-content__timetable Работаем с 9:00 до 23:00 ежедневно
+                .contacts-content__row
+                    form.contacts-content__form(id="contacts-content-form")
+                        h2.contacts-content__title.title Остались вопросы?
+                        input(type='hidden' name="project_name" value='Homenet')
+                        input(type='hidden' name='admin_email' value='n.rybkin@gmail.com')
+                        input(type='hidden' name='form_subject' value='Входящий вопрос')
+                        input.contacts-content__input(type="text", placeholder="Ваше имя*", id="name", name="Имя" required)
+                        input.contacts-content__input(type="text", placeholder="Email*", id="email", name="Email" required)
+                        input.contacts-content__input(type="text", placeholder="Телефон", id="telephone", name="Телефон")
+                        input.contacts-content__input(type="text", placeholder="Введите вопрос*", id="question", name="Вопрос" required)
+                        label.contacts-content__agreement(for="agreement") 
+                            input.contacts-content__agreement-checkbox(type="checkbox", name="Согласие", id="agreement" required)
+                            span.contacts-content__agreement-checkbox-fake
+                            a.connection-address__text.contacts-content__agreement-text(href="./Соглашение.pdf") Согласен на обработку персональных данных
+                        button.contacts-content__btn.default-yellow-button(type="submit") Отправить
+                        a.contacts-content__link.gratitude-application-popup-link(href="#gratitude-application-popup")
+                    .contacts-content__company-details
+                        include ./_company-details.pug
+                .contacts-content__map 
+                    .contacts-content__map-title Г. Санкт-Петербург, пл. Морской Славы, д. 1
+                    .contacts-content__map-box
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9120ed3c2b4b549d745d03c348faba410256efabce8d1e32e533c3b891ab6bc4&amp;source=constructor" width="100%" height="536" frameborder="0"></iframe>

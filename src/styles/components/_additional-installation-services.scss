@@ -1,0 +1,60 @@
+.additional-installation-services{
+    background: #FAFAFA;
+    border: 1px solid rgba(229, 229, 229, 0.47);
+    box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.06);
+    margin-bottom: 58px;
+    &__title{
+        text-align: center;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        padding: 27px;
+        background-color: #F2F6FF;
+    }
+    &__list-item{
+        padding: 31px 0 27px 0;
+        background-color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #FFFFFF;
+        &:nth-child(2n + 2){
+            background-color: #FAFAFA;
+        }
+    }
+    &__list-left{
+        padding-left: 104px;
+        @include for-tablet-landscape{
+            padding-left: 32px;
+        }
+        @include for-tablet-portrait{
+            padding-left: 16px;
+        }
+        @include for-phone{
+            font-size: 12px;
+        }
+    }
+    &__list-right{
+        padding-right: 104px;
+        margin-left: 100px;
+        max-width: 350px;
+        width: 100%;
+        text-align: left;
+        flex: 0 0 auto;
+        @include for-tablet-landscape{
+            padding-right: 32px;
+            margin-left: 30px;
+            max-width: 250px;
+        }
+        @include for-tablet-portrait{
+            padding-right: 16px;
+            max-width: 200px;
+            text-align: right;
+        }
+        @include for-phone{
+            font-size: 12px;
+            max-width: 130px;
+            margin-left: 15px;
+        }
+    }
+}

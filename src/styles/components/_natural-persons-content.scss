@@ -1,0 +1,107 @@
+.natural-persons-content{
+    margin-top: 64px;
+    margin-bottom: 65px;
+    &__title{
+        margin-bottom: 66px;
+        @include for-phone{
+            margin-bottom: 24px;
+        }
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        grid-gap: 24px;
+        margin-bottom: 84px;
+        @include for-tablet-landscape{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include for-tablet-portrait{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    &__list-item{
+        .tariff-card{
+            background-color: #FFFFFF;
+            box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.06);
+            min-height: 216px;
+            position: relative;
+            background-position: right center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            &::after{
+                position: absolute;
+                content: url('../img/tariff-card/hover.svg');
+                top: 0;
+                right: 30px;
+                opacity: 0;
+                transition: all .3s ease-in-out;
+            }
+            &:hover{
+                .tariff-card__link{
+                    background-color: #FFDD2D;
+                    border: 1px solid #FFDD2D;
+                    color: #000000;
+                }
+                &::after{
+                    opacity: 1;
+                }
+            }
+            &__box{
+                padding: 42px 9px 31px 9px;
+            }
+            &__title{
+                font-size: 20px;
+                line-height: 24px;
+                margin-bottom: 19px;
+            }
+            &__adress{
+                margin-bottom: 31px;
+            }
+            &--1{
+                background-image: url('../img/tariff-card/img-1.png');
+            }
+            &--2{
+                background-image: url('../img/tariff-card/img-2.png');
+            }
+            &--3{
+                background-image: url('../img/tariff-card/img-3.png');
+            }
+            &--4{
+                background-image: url('../img/tariff-card/img-4.png');
+            }
+            &--5{
+                background-image: url('../img/tariff-card/img-5.png');
+            }
+            &--6{
+                background-image: url('../img/tariff-card/img-6.png');
+            }
+            &__link{
+                border: 1px solid #34436A;
+                color: #34436A;;
+                background-color: transparent;
+                border-radius: 2px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.5;
+                padding: 11px 19px;
+                min-width: 128px;
+                text-align: center;
+                transition:  all .3s ease-in-out;
+                display: inline-block;
+            }
+        }
+    }
+    &__coverage-area{
+        .coverage-area{
+            &__title{
+                font-size: 30px;
+                line-height: 34px;
+                margin-bottom: 66px;
+                @include for-tablet-portrait{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}

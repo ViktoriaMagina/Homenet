@@ -1,0 +1,114 @@
+.footer{
+    background-color: #FAFAFA;
+}
+.footer-inner{
+    padding-top: 66px;
+}
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    @include for-tablet-landscape-min{
+        flex-direction: column-reverse;
+    }
+    &__nav{
+        max-width: 633px;
+        color: #7A7A7A;
+        @include for-tablet-landscape-min{
+            max-width: 100%;
+        }
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__list-item{
+        margin-right: 45px;
+        margin-bottom: 20px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__list-link{
+        position: relative;
+        &::after{
+            content: "";
+            width: 0;
+            height: 1px;
+            position: absolute;
+            background-color: #9E9E9E;
+            bottom: -1px;
+            left: 0;
+            transition: all .3s ease-in-out;
+        }
+        &:hover{
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+    &__contact{
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 auto;
+        margin-left: 30px;
+        @include for-tablet-landscape-min{
+            margin-left: 0;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+    }
+    &__contact-tel{
+        color: #202020;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    &__contact-text{
+        color: #9B9B9B;
+    }
+}
+.footer-bottom{
+    padding-bottom: 31px;
+    &__list{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__list-item{
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+        color: #9D9D9D;
+        margin-right: 75px;
+        margin-bottom: 14px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+.footer-scroll{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    opacity: .6;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #d0d0d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: none;
+    z-index: 9;
+    &:hover{
+        transition: all .3s ease-in-out;
+        opacity: .8;
+    }
+    @media (max-width: 830px) {
+        display: flex;
+    }
+}

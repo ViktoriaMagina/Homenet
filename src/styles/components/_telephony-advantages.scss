@@ -1,0 +1,56 @@
+.telephony-advantages{
+    margin: 84px 0;
+    &__title{
+        margin-bottom: 68px;
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        grid-gap: 30px;
+        @include for-tablet-landscape{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    &__item{
+        background: #FFFFFF;
+        box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.06);
+        padding: 27px 9px 22px 9px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: bottom right;
+        @include for-tablet-portrait{
+            padding-bottom: 230px;
+        }
+    }
+    &__item-title{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+    &__item-text{
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 14px;
+        &::before{
+            position: absolute;
+            content: '';
+            background-color: #FFDD2D;
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            left: 0;
+            top: 7px;
+        }
+    }
+    &__item--wired{
+        background-image: url('../img/telephony-advantages/img-1.png');
+        @include for-tablet-portrait{
+            background-image: url('../img/telephony-advantages/img-1-mini.png');
+        }
+    }
+    &__item--cell-phone{
+        background-image: url('../img/telephony-advantages/img-2.png');
+    }
+}

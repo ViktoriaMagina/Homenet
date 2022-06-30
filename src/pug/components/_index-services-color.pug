@@ -1,0 +1,32 @@
+include ./_service-color
+
+.index-services-color
+    .container
+        .index-services-color__inner 
+            ul.index-services-color__list
+                li.index-services-color__item
+                    .service-color
+                        .service-color__inner
+                            img.service-color__img(src=`./img/service-color-card/img-1.png`, alt=`Интернет`)
+                            .service-color__box 
+                                h5.service-color__title Интернет
+                                p.service-color__text Скорость до 200 Мбит/с
+                        a.service-color__link.default-yellow-button.legal-or-physical-popup-link(href="#legal-or-physical-popup") Подключить
+                li.index-services-color__item
+                    .service-color
+                        .service-color__inner
+                            img.service-color__img(src=`./img/service-color-card/img-2.png`, alt=`Телевидение`)
+                            .service-color__box 
+                                h5.service-color__title Телевидение
+                                p.service-color__text Более 300 ТВ каналов и 6 онлайн-кинотеатров
+                        a.service-color__link.default-yellow-button.legal-or-physical-popup-link(href="#legal-or-physical-popup") Подключить
+                li.index-services-color__item
+                    +service-color(3, "Телефония", "Современная телефония для бизнеса", "Подключить", "./telephony.html")
+                li.index-services-color__item
+                    .service-color
+                        .service-color__inner
+                            img.service-color__img(src=`./img/service-color-card/img-4.png`, alt=`Подключение`)
+                            .service-color__box 
+                                h5.service-color__title Подключение
+                                p.service-color__text Интернет + Wi-Fi роутер одним нажатием
+                        a.service-color__link.default-yellow-button.legal-or-physical-popup-link(href="#legal-or-physical-popup") Стать абонентом

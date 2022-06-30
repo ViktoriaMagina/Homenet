@@ -1,0 +1,92 @@
+.it-outsourcing-table{
+    margin-bottom: 84px;
+    &__content{
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid rgba(229, 229, 229, 0.47);
+        box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.06);
+        // overflow-x: auto;
+        border-right: none;
+        @media (max-width: 900px) {
+            overflow-x: auto;
+        }
+    }
+    &__row{
+        border: 1px solid rgba(122, 122, 122, 0.11);
+        display: grid;
+        // grid-template-columns: 521px repeat(3, 234px);
+        grid-template-columns: 400px repeat(3, 1fr);
+        border-top: none;
+        border-bottom: none;
+        border-right: none;
+        &:nth-child(2n + 2){
+            .it-outsourcing-table__row-title,
+            .it-outsourcing-table__row-item{
+                background-color: #FAFAFA;
+            }
+        }
+        @media (max-width: 900px) {
+            grid-template-columns: 400px repeat(3, 234px);
+        }
+        
+    }
+    &__row-title{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 20px 29px;
+        border-bottom: 1px solid rgba(122, 122, 122, 0.11);
+    }
+    &__row-item{
+        padding: 30px;
+        text-align: center;
+        border: 1px solid rgba(122, 122, 122, 0.11);
+        font-size: 18px;
+        line-height: 1.5;
+        border-top: none;
+        border-right: none;
+
+    }
+    &__header{
+        display: grid;
+        // grid-template-columns: 521px 702px;
+        grid-template-columns: repeat(2, 1fr);
+        .it-outsourcing-table__row-item{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            background: #F2F6FF;
+        }
+        .it-outsourcing-table__row-title{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            background: #F2F6FF;
+        }
+        @media (max-width: 900px) {
+            grid-template-columns: 400px 702px;
+        }
+    }
+    &__item{
+        text-align: center;
+        border: 1px solid rgba(122, 122, 122, 0.11);
+        &:first-child{
+            text-align: right;
+        }
+    }
+    &__row-link{
+        border: 1px solid rgba(122, 122, 122, 0.11);
+        .it-outsourcing-table__item{
+            border-top: none;
+            border-bottom: none;
+        }
+    }
+    &__row-links{
+        .it-outsourcing-table__row-item{
+            padding: 30px 0;
+            .it-outsourcing-table__row-link{
+                margin: 0 auto;
+            }
+        }
+    }
+}

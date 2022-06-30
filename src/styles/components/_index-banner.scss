@@ -1,0 +1,59 @@
+.index-banner{
+    // height: calc(100vh - 144px);
+    height: 400px;
+    background-color: #FAFAFA;
+    @media (max-height: 570px) {
+        height: 600px;
+    }
+    @include for-phone{
+        height: 440px;
+    }
+    &__inner{
+        // height: calc(100vh - 144px);
+        height: 400px;
+        background-image: url('../img/index-banner/background.png');
+        background-repeat: no-repeat;
+        background-position: right bottom -40px;
+        background-size: contain;
+        @media (max-height: 570px) {
+            height: 440px;
+        }
+        @include for-phone{
+            background-image: url('../img/index-banner/background-mini.png');
+            background-size: 250px;
+            height: 440px;
+        }
+    }
+    &__box {
+        padding-top: 70px;
+        @include for-phone{
+            padding-top: 28px;
+        } 
+    }
+    &__title{
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 16px;
+        max-width: 471.96px;
+        font-family: 'Arimo', sans-serif;
+        @include for-phone{
+            font-size: 30px;
+            line-height: 45px;
+            max-width: 290px;
+        }
+    }
+    &__text{
+        font-size: 17px;
+        line-height: 22px;
+        margin-bottom: 28px;
+        max-width: 376px;
+        @include for-phone{
+            max-width: 230px;
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+    &__link{
+        min-width: 184px;
+    }
+}

@@ -1,0 +1,23 @@
+form#application-vacancy-popup.white-popup-block.mfp-hide.application-vacancy-popup.popup
+  h4.application-vacancy-popup__title Заявка на вакансию
+  fieldset.application-vacancy-popup__box(style='border:0;')
+    .application-vacancy-popup__columns
+        .application-vacancy-popup__column--hidden
+            input(type='hidden' name="project_name" value='Homenet')
+            input(type='hidden' name='admin_email' value='n.rybkin@gmail.com')
+            input(type='hidden' name='form_subject' value='Заявка на вакансию')
+        .application-vacancy-popup__column
+            input.application-vacancy-popup__input#fio(name='ФИО' type='text' placeholder='ФИО*' required)
+            input.application-vacancy-popup__input#email(name='Email' type='text' placeholder='Email*' required)
+        .application-vacancy-popup__column
+            input.application-vacancy-popup__input#city(name='Город проживания' type='text' placeholder='Город проживания')
+            input.application-vacancy-popup__input#tel(name='Телефон' type='text' placeholder='Телефон*' required)
+    textarea.application-vacancy-popup__textarea(name="Рассказ о себе" placeholder='Расскажите о себе*' required)
+    label.application-vacancy-popup__file(for="file")
+        input.application-vacancy-popup__file-input(type="file", name="Резюме", id="file")
+        .application-vacancy-popup__file-input-fake Загрузите резюме, если есть
+    label.application-vacancy-popup__agreement(for="agreement")
+        input.application-vacancy-popup__checkbox(type="checkbox", name="Соглашение", id="agreement" value="Согласен" required)
+        span.application-vacancy-popup__checkbox-fake
+        a.connection-address__text(href="./Соглашение.pdf") Согласен на обработку персональных данных
+    button.application-vacancy-popup__btn.default-yellow-button(type="submit") Отправить

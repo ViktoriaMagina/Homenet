@@ -1,0 +1,76 @@
+.header-menu{
+    background-color: #FFFFFF;
+    position: absolute;
+    transition: transform .3s ease-in-out;
+    transform: translateX(-110%);
+    height: 100vh;
+    left: 0;
+    top: 0;  
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#000000, .6);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    z-index: 20;
+    &.active{
+        transform: translateX(0%);
+    }
+    &__inner{
+        overflow-y: auto;
+        position: relative;
+        padding: 88px 25px 69px 25px;
+        width: 400px;
+        background-color: #FFFFFF;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        @include for-tablet-landscape-min{
+            width: 300px;
+        }
+        @include for-phone{
+            width: 100%;
+            padding: 68px 25px 20px 25px;
+        }
+    }
+    &__btn{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 23px;
+        right: 16px;
+    }
+    &__btn-img{
+        object-fit: contain;
+        height: inherit;
+        width: 100%;
+    }
+    &__list{
+        height: 70vh;
+        overflow-y: auto;
+    }
+    &__list-item{
+        margin-bottom: 18px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__contact{
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    &__contact-tel{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0.01em;
+        color: #202020;
+    }
+    &__contact-text{
+        color: #9B9B9B;
+    }
+}

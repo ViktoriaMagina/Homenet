@@ -1,0 +1,57 @@
+section.application-video-surveillance-form
+    .container 
+        .application-video-surveillance-form__inner
+            h1.application-video-surveillance-form__title.title Заявка на подключение
+            form.application-video-surveillance-form__content(id="application-video-surveillance")
+                .application-video-surveillance-form__main
+                    h2.application-video-surveillance-form__main-title Видеонаблюдение
+                    .application-video-surveillance-form__main-box
+                        .video-surveillance
+                            label.video-surveillance__label(for="video-surveillance-1") 
+                                input.video-surveillance__checkbox.data-item(type="radio", name="Видеонаблюдение", data-item="1" id="video-surveillance-1" value="Облачный 1 250 руб/мес")
+                                span.video-surveillance__checkbox-fake
+                                .video-surveillance__text
+                                    p.video-surveillance__text-score Облачный 1
+                                    p.video-surveillance__text-cost 250 руб/мес
+                            label.video-surveillance__label(for="video-surveillance-5") 
+                                input.video-surveillance__checkbox.data-item(type="radio", name="Видеонаблюдение", data-item="5" id="video-surveillance-5" value="Облачный 5 350 руб/мес")
+                                span.video-surveillance__checkbox-fake
+                                .video-surveillance__text
+                                    p.video-surveillance__text-score Облачный 5
+                                    p.video-surveillance__text-cost 350 руб/мес
+                            label.video-surveillance__label(for="video-surveillance-10") 
+                                input.video-surveillance__checkbox.data-item(type="radio", name="Видеонаблюдение", data-item="10" id="video-surveillance-10" value="Облачный 10 500 руб/мес")
+                                span.video-surveillance__checkbox-fake
+                                .video-surveillance__text
+                                    p.video-surveillance__text-score Облачный 10
+                                    p.video-surveillance__text-cost 500 руб/мес
+                            label.video-surveillance__label(for="video-surveillance-30") 
+                                input.video-surveillance__checkbox.data-item(type="radio", name="Видеонаблюдение", data-item="30" id="video-surveillance-30" value="Облачный 30 800 руб/мес")
+                                span.video-surveillance__checkbox-fake
+                                .video-surveillance__text
+                                    p.video-surveillance__text-score Облачный 30
+                                    p.video-surveillance__text-cost 800 руб/мес
+                .application-internet-form__adress
+                    h2.application-internet-form__adress-title Адрес подключения
+                    .application-internet-form__adress-box
+                        .connection-address
+                            .connection-address__columns
+                                .connection-address__column--hidden 
+                                    input(type='hidden' name="project_name" value='Homenet')
+                                    input(type='hidden' name='admin_email' value='n.rybkin@gmail.com')
+                                    input(type='hidden' name='form_subject' value='Заявка на подключение видеонаблюдения')
+                                .connection-address__column 
+                                    input.connection-address__input(type="text", placeholder="Населённый пункт", id="locality", name="Населённый пункт")
+                                    input.connection-address__input(type="text", placeholder="Дом", id="house", name="Дом")
+                                    input.connection-address__input(type="text", placeholder="ФИО*", id="fio", name="ФИО",  required)
+                                .connection-address__column 
+                                    input.connection-address__input(type="text", placeholder="Улица", id="street", name="Улица")
+                                    input.connection-address__input(type="text", placeholder="Номер офиса", id="office-number", name="Номер офиса")
+                                    input.connection-address__input(type="text", placeholder="Телефон*", id="telephone", name="Телефон",  required)
+                            label.connection-address__agreement(for="agreement")
+                                input.connection-address__checkbox._req(type="checkbox", name="Соглашение", id="agreement", value="Согласен" required)
+                                span.connection-address__checkbox-fake
+                                a.connection-address__text(href="./Соглашение.pdf") Согласен на обработку персональных данных
+                button.application-video-surveillance-form__button.default-yellow-button(type="submit") Отправить
+                a.application-video-surveillance-form__link.gratitude-application-popup-link(href="#gratitude-application-popup")
+
