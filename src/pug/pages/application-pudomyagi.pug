@@ -1,149 +1,151 @@
 doctype html
-head(lang='ru')
-  meta(charset='UTF-8')
-  meta(http-equiv='X-UA-Compatible', content='IE=edge')
-  meta(name='viewport', content='width=device-width, initial-scale=1.0')
-  link(rel='icon', href='./favicon.ico')
-  link(rel='stylesheet', href='./css/style.min.css')
-  title Homenet
-header.header#header
-    .container
-        .header-main 
-            include ../components/_header-menu.pug
-            .header-top 
-                .header-top__right 
-                    .header-top__btn
-                        img(src="./img/header/burger.svg", alt="burger")
-                    a.header-logo(href="./index.html")
-                        img.header-logo__img(src="./img/header/logo.svg", alt="Логотип")
-                    nav.header-top__nav 
-                        ul.header-top__nav-list
-                            li.header-top__nav-item
-                                a.header-top__nav-link(href="./legal-entities.html") Юридическим лицам
-                            li.header-top__nav-item
-                                a.header-top__nav-link(href="./natural-persons.html") Физическим лицам
-                            li.header-top__nav-item
-                                a.header-top__nav-link(href="./telephony.html") Телефония
-                            li.header-top__nav-item
-                                a.header-top__nav-link(href="./television.html") Телевидение
-                a.header-sign-in(href="http://lc.homenet.spb.su/" target="_blank")
-                    span.header-sign-in__text Войти
-                    img.header-sign-in__img(src="./img/header/signIn.svg", alt="Войти")
-            .header-bottom
-                nav.header-bottom__nav
-                    ul.header-bottom__nav-list--hidden.header-bottom__nav-list
-                        li.header-bottom__nav-item
-                            a.header-bottom__nav-link(href="./legal-entities.html") Юридическим лицам
-                        li.header-bottom__nav-item
-                            a.header-bottom__nav-link(href="./natural-persons.html") Физическим лицам
-                        li.header-bottom__nav-item
-                            a.header-bottom__nav-link(href="./telephony.html") Телефония
-                        li.header-bottom__nav-item
-                            a.header-bottom__nav-link(href="./television.html") Телевидение
-                    ul.header-bottom__nav-list
-                        li.header-bottom__nav-item 
-                            a.header-bottom__nav-link.legal-or-physical-popup-link(href="#legal-or-physical-popup") Тарифы
-                        li.header-bottom__nav-item 
-                            a.header-bottom__nav-link(href="./payment.html") Оплата
-                        li.header-bottom__nav-item 
-                            a.header-bottom__nav-link(href="./video-surveillance.html") Видеонаблюдение
-                        li.header-bottom__nav-item 
-                            a.header-bottom__nav-link(href="./it-outsourcing.html") IT-аутсорсинг
-                        li.header-bottom__nav-item 
-                            a.header-bottom__nav-link(href="./contacts.html") Контакты
-                        li.header-bottom__nav-item 
-                            a.header-bottom__nav-link(href="./products.html") Товары
-                        li.header-bottom__nav-item 
-                            a.header-bottom__nav-link(href="./career.html") Карьера
-                        li.header-bottom__nav-item 
-                            a.header-bottom__nav-link.active.legal-or-physical-popup-link(href="#legal-or-physical-popup") Подключиться
-                a.header-tel(href="tel:+78127770601") +7 (812) 777-06-01
-.wrapper#wrapper
-  main.main
-    .content-wrapper
-        section.application-internet-tv-form
-            .container 
-                .application-internet-tv-form__inner
-                    h1.application-internet-tv-form__title.title Заявка на подключение
-                    form.application-internet-tv-form__content(id="application-internet-tv")
-                        .application-internet-tv-form__container
-                            .application-internet-tv-form__main
-                                h2.application-internet-tv-form__main-title Интернет
-                                .application-internet-tv-form__main-box
-                                    .internet-speed
-                                        label.internet-speed__label(for="internet-speed-5") 
-                                            input.internet-speed__checkbox.data-item(type="radio", name="Скорость интернета", data-item="5" id="internet-speed-5", value="5 мбит/с 250 руб/мес")
-                                            span.internet-speed__checkbox-fake
-                                            .internet-speed__text
-                                                p.internet-speed__text-score 5 мбит/с
-                                                p.internet-speed__text-cost 250 руб/мес
-                                        label.internet-speed__label(for="internet-speed-15") 
-                                            input.internet-speed__checkbox.data-item(type="radio", name="Скорость интернета", data-item="15" id="internet-speed-15", value="15 мбит/с 350 руб/мес")
-                                            span.internet-speed__checkbox-fake
-                                            .internet-speed__text
-                                                p.internet-speed__text-score 15 мбит/с
-                                                p.internet-speed__text-cost 350 руб/мес
-                                        label.internet-speed__label(for="internet-speed-30") 
-                                            input.internet-speed__checkbox.data-item(type="radio", name="Скорость интернета", data-item="30" id="internet-speed-30", value="30 мбит/с 500 руб/мес")
-                                            span.internet-speed__checkbox-fake
-                                            .internet-speed__text
-                                                p.internet-speed__text-score 30 мбит/с
-                                                p.internet-speed__text-cost 500 руб/мес
-                                        label.internet-speed__label(for="internet-speed-50") 
-                                            input.internet-speed__checkbox.data-item(type="radio", name="Скорость интернета", data-item="50" id="internet-speed-50", value="50 мбит/с 800 руб/мес")
-                                            span.internet-speed__checkbox-fake
-                                            .internet-speed__text
-                                                p.internet-speed__text-score 50 мбит/с
-                                                p.internet-speed__text-cost 800 руб/мес
-                                    .internet-type
-                                        label.internet-type__label(for="internet-type-1") 
-                                            input.internet-type__checkbox(type="radio", name="Wi-Fi роутер", id="internet-type-1", value="Wi-Fi роутер Mercusys MW325R 1 900 ₽")
-                                            span.internet-type__checkbox-fake
-                                            .internet-type__text
-                                                p.internet-type__text-name Wi-Fi роутер Mercusys MW325R 
-                                                p.internet-type__text-cost 1 900 ₽
-                                        label.internet-type__label(for="internet-type-2") 
-                                            input.internet-type__checkbox(type="radio", name="Wi-Fi роутер", id="internet-type-2", value="Wi-Fi роутер ASUS RT-N12 3 000 ₽")
-                                            span.internet-type__checkbox-fake
-                                            .internet-type__text
-                                                p.internet-type__text-name Wi-Fi роутер ASUS RT-N12  
-                                                p.internet-type__text-cost 3 000 ₽
-                            .application-internet-tv-form__main
-                                h2.application-internet-tv-form__main-title Телевидение
-                                .application-internet-tv-form__main-box
-                                    .television
-                                        label.television__label(for="television") 
-                                            input.television__checkbox(type="checkbox", name="Подключить телевидение", id="television" value="Подключить")
-                                            span.television__checkbox-fake
-                                            p.television__label-text Подключить телевидение
-                                        .television__box
-                                            p.television__text Тарифы часто меняются. Актуальные тарифы в разделе 
-                                            a.television__link(href="./television.html") Телевидение
-                        .application-internet-tv-form__adress
-                            h2.application-internet-tv-form__adress-title Адрес подключения
-                            .application-internet-tv-form__adress-box
-                                .connection-address
-                                    .connection-address__columns
-                                        .connection-address__column--hidden 
-                                            input(type='hidden' name="project_name" value='Homenet')
-                                            input(type='hidden' name='admin_email' value='n.rybkin@gmail.com')
-                                            input(type='hidden' name='form_subject' value='Заявка на подключение интернета и телевидения в пос. Пудомяги')
-                                        .connection-address__column 
-                                            input.connection-address__input(type="text", placeholder="Населённый пункт", id="locality", name="Населённый пункт")
-                                            input.connection-address__input(type="text", placeholder="Дом", id="house", name="Дом")
-                                            input.connection-address__input(type="text", placeholder="ФИО*", id="fio", name="ФИО",  required)
-                                        .connection-address__column 
-                                            input.connection-address__input(type="text", placeholder="Улица", id="street", name="Улица")
-                                            input.connection-address__input(type="text", placeholder="Номер квартиры", id="apartment-number", name="Номер квартиры")
-                                            input.connection-address__input(type="text", placeholder="Телефон*", id="telephone", name="Телефон",  required)
-                                    label.connection-address__agreement(for="agreement")
-                                        input.connection-address__checkbox._req(type="checkbox", name="Соглашение", id="agreement", value="Согласен"  required)
-                                        span.connection-address__checkbox-fake
-                                        a.connection-address__text(href="./Соглашение.pdf") Согласен на обработку персональных данных
-                        button.application-internet-tv-form__button.default-yellow-button(type="submit") Отправить
-                        a.application-internet-tv-form__link.gratitude-application-popup-link(href="#gratitude-application-popup")
-  include ../components/_footer.pug
-  include ../components/_gratitude-application-popup.pug
-  include ../components/_legal-or-physical-popup
-script(src='./js/application.js')
-script(src='./js/localGet.js')
+html
+    head(lang='ru')
+      meta(charset='UTF-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge')
+      meta(name='viewport', content='width=device-width, initial-scale=1.0')
+      link(rel='icon', href='./favicon.ico')
+      link(rel='stylesheet', href='./css/style.min.css')
+      title Homenet
+    body
+        header.header#header
+            .container
+                .header-main 
+                    include ../components/_header-menu.pug
+                    .header-top 
+                        .header-top__right 
+                            .header-top__btn
+                                img(src="./img/header/burger.svg", alt="burger")
+                            a.header-logo(href="./index.html")
+                                img.header-logo__img(src="./img/header/logo.svg", alt="Логотип")
+                            nav.header-top__nav 
+                                ul.header-top__nav-list
+                                    li.header-top__nav-item
+                                        a.header-top__nav-link(href="./legal-entities.html") Юридическим лицам
+                                    li.header-top__nav-item
+                                        a.header-top__nav-link(href="./natural-persons.html") Физическим лицам
+                                    li.header-top__nav-item
+                                        a.header-top__nav-link(href="./telephony.html") Телефония
+                                    li.header-top__nav-item
+                                        a.header-top__nav-link(href="./television.html") Телевидение
+                        a.header-sign-in(href="http://lc.homenet.spb.su/" target="_blank")
+                            span.header-sign-in__text Войти
+                            img.header-sign-in__img(src="./img/header/signIn.svg", alt="Войти")
+                    .header-bottom
+                        nav.header-bottom__nav
+                            ul.header-bottom__nav-list--hidden.header-bottom__nav-list
+                                li.header-bottom__nav-item
+                                    a.header-bottom__nav-link(href="./legal-entities.html") Юридическим лицам
+                                li.header-bottom__nav-item
+                                    a.header-bottom__nav-link(href="./natural-persons.html") Физическим лицам
+                                li.header-bottom__nav-item
+                                    a.header-bottom__nav-link(href="./telephony.html") Телефония
+                                li.header-bottom__nav-item
+                                    a.header-bottom__nav-link(href="./television.html") Телевидение
+                            ul.header-bottom__nav-list
+                                li.header-bottom__nav-item 
+                                    a.header-bottom__nav-link.legal-or-physical-popup-link(href="#legal-or-physical-popup") Тарифы
+                                li.header-bottom__nav-item 
+                                    a.header-bottom__nav-link(href="./payment.html") Оплата
+                                li.header-bottom__nav-item 
+                                    a.header-bottom__nav-link(href="./video-surveillance.html") Видеонаблюдение
+                                li.header-bottom__nav-item 
+                                    a.header-bottom__nav-link(href="./it-outsourcing.html") IT-аутсорсинг
+                                li.header-bottom__nav-item 
+                                    a.header-bottom__nav-link(href="./contacts.html") Контакты
+                                li.header-bottom__nav-item 
+                                    a.header-bottom__nav-link(href="./products.html") Товары
+                                li.header-bottom__nav-item 
+                                    a.header-bottom__nav-link(href="./career.html") Карьера
+                                li.header-bottom__nav-item 
+                                    a.header-bottom__nav-link.active.legal-or-physical-popup-link(href="#legal-or-physical-popup") Подключиться
+                        a.header-tel(href="tel:+78127770601") +7 (812) 777-06-01
+        .wrapper#wrapper
+          main.main
+            .content-wrapper
+                section.application-internet-tv-form
+                    .container 
+                        .application-internet-tv-form__inner
+                            h1.application-internet-tv-form__title.title Заявка на подключение
+                            form.application-internet-tv-form__content(id="application-internet-tv")
+                                .application-internet-tv-form__container
+                                    .application-internet-tv-form__main
+                                        h2.application-internet-tv-form__main-title Интернет
+                                        .application-internet-tv-form__main-box
+                                            .internet-speed
+                                                label.internet-speed__label(for="internet-speed-5") 
+                                                    input.internet-speed__checkbox.data-item(type="radio", name="Скорость интернета", data-item="5" id="internet-speed-5", value="5 мбит/с 250 руб/мес")
+                                                    span.internet-speed__checkbox-fake
+                                                    .internet-speed__text
+                                                        p.internet-speed__text-score 5 мбит/с
+                                                        p.internet-speed__text-cost 250 руб/мес
+                                                label.internet-speed__label(for="internet-speed-15") 
+                                                    input.internet-speed__checkbox.data-item(type="radio", name="Скорость интернета", data-item="15" id="internet-speed-15", value="15 мбит/с 350 руб/мес")
+                                                    span.internet-speed__checkbox-fake
+                                                    .internet-speed__text
+                                                        p.internet-speed__text-score 15 мбит/с
+                                                        p.internet-speed__text-cost 350 руб/мес
+                                                label.internet-speed__label(for="internet-speed-30") 
+                                                    input.internet-speed__checkbox.data-item(type="radio", name="Скорость интернета", data-item="30" id="internet-speed-30", value="30 мбит/с 500 руб/мес")
+                                                    span.internet-speed__checkbox-fake
+                                                    .internet-speed__text
+                                                        p.internet-speed__text-score 30 мбит/с
+                                                        p.internet-speed__text-cost 500 руб/мес
+                                                label.internet-speed__label(for="internet-speed-50") 
+                                                    input.internet-speed__checkbox.data-item(type="radio", name="Скорость интернета", data-item="50" id="internet-speed-50", value="50 мбит/с 800 руб/мес")
+                                                    span.internet-speed__checkbox-fake
+                                                    .internet-speed__text
+                                                        p.internet-speed__text-score 50 мбит/с
+                                                        p.internet-speed__text-cost 800 руб/мес
+                                            .internet-type
+                                                label.internet-type__label(for="internet-type-1") 
+                                                    input.internet-type__checkbox(type="radio", name="Wi-Fi роутер", id="internet-type-1", value="Wi-Fi роутер Mercusys MW325R 1 900 ₽")
+                                                    span.internet-type__checkbox-fake
+                                                    .internet-type__text
+                                                        p.internet-type__text-name Wi-Fi роутер Mercusys MW325R 
+                                                        p.internet-type__text-cost 1 900 ₽
+                                                label.internet-type__label(for="internet-type-2") 
+                                                    input.internet-type__checkbox(type="radio", name="Wi-Fi роутер", id="internet-type-2", value="Wi-Fi роутер ASUS RT-N12 3 000 ₽")
+                                                    span.internet-type__checkbox-fake
+                                                    .internet-type__text
+                                                        p.internet-type__text-name Wi-Fi роутер ASUS RT-N12  
+                                                        p.internet-type__text-cost 3 000 ₽
+                                    .application-internet-tv-form__main
+                                        h2.application-internet-tv-form__main-title Телевидение
+                                        .application-internet-tv-form__main-box
+                                            .television
+                                                label.television__label(for="television") 
+                                                    input.television__checkbox(type="checkbox", name="Подключить телевидение", id="television" value="Подключить")
+                                                    span.television__checkbox-fake
+                                                    p.television__label-text Подключить телевидение
+                                                .television__box
+                                                    p.television__text Тарифы часто меняются. Актуальные тарифы в разделе 
+                                                    a.television__link(href="./television.html") Телевидение
+                                .application-internet-tv-form__adress
+                                    h2.application-internet-tv-form__adress-title Адрес подключения
+                                    .application-internet-tv-form__adress-box
+                                        .connection-address
+                                            .connection-address__columns
+                                                .connection-address__column--hidden 
+                                                    input(type='hidden' name="project_name" value='Homenet')
+                                                    input(type='hidden' name='admin_email' value='n.rybkin@gmail.com')
+                                                    input(type='hidden' name='form_subject' value='Заявка на подключение интернета и телевидения в пос. Пудомяги')
+                                                .connection-address__column 
+                                                    input.connection-address__input(type="text", placeholder="Населённый пункт", id="locality", name="Населённый пункт")
+                                                    input.connection-address__input(type="text", placeholder="Дом", id="house", name="Дом")
+                                                    input.connection-address__input(type="text", placeholder="ФИО*", id="fio", name="ФИО",  required)
+                                                .connection-address__column 
+                                                    input.connection-address__input(type="text", placeholder="Улица", id="street", name="Улица")
+                                                    input.connection-address__input(type="text", placeholder="Номер квартиры", id="apartment-number", name="Номер квартиры")
+                                                    input.connection-address__input(type="text", placeholder="Телефон*", id="telephone", name="Телефон",  required)
+                                            label.connection-address__agreement(for="agreement")
+                                                input.connection-address__checkbox._req(type="checkbox", name="Соглашение", id="agreement", value="Согласен"  required)
+                                                span.connection-address__checkbox-fake
+                                                a.connection-address__text(href="./Соглашение.pdf") Согласен на обработку персональных данных
+                                button.application-internet-tv-form__button.default-yellow-button(type="submit") Отправить
+                                a.application-internet-tv-form__link.gratitude-application-popup-link(href="#gratitude-application-popup")
+            include ../components/_footer.pug
+            include ../components/_gratitude-application-popup.pug
+            include ../components/_legal-or-physical-popup
+        script(src='./js/application.js')
+        script(src='./js/localGet.js')
